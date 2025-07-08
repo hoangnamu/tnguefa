@@ -16,6 +16,21 @@
   -->
 <!--  <base href="/">-->
 
+  <script>
+    // Only run this on first load (not after Flutter app loads)
+    (function () {
+      const path = window.location.pathname;
+      const query = window.location.search;
+
+      // Match `/params` and NOT already using `#/`
+      if (path.includes('/params') && !window.location.hash) {
+        const newUrl = `${window.location.origin}/tnguefa/#${path}${query}`;
+        window.location.replace(newUrl);
+      }
+    })();
+  </script>
+
+
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="A new Flutter project.">
