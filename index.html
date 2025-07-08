@@ -1,34 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
+<script>
+  (function () {
+    const path = window.location.pathname;
+    const query = window.location.search;
+    const hash = window.location.hash;
 
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
+    // If user opens a deep link like /params?appId=... (without hash)
+    if (!hash && path !== '/' && path !== '/tnguefa/') {
+      const redirectTo = `/tnguefa/#${path}${query}`;
+      window.location.replace(redirectTo);
+    }
+  })();
+</script>
 
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-<!--  <base href="/">-->
-
-  <script>
-    // Only run this on first load (not after Flutter app loads)
-    (function () {
-      const path = window.location.pathname;
-      const query = window.location.search;
-
-      // Match `/params` and NOT already using `#/`
-      if (path.includes('/params') && !window.location.hash) {
-        const newUrl = `${window.location.origin}/tnguefa/#${path}${query}`;
-        window.location.replace(newUrl);
-      }
-    })();
-  </script>
 
 
   <meta charset="UTF-8">
