@@ -17735,8 +17735,9 @@ s.wM()},
 zM:function zM(a){this.a=a},
 qQ:function qQ(a){this.a=a},
 Fn:function Fn(){this.c=this.a=null},
-a02:function a02(a,b){this.a=a
-this.b=b},
+a02:function a02(a,b,c){this.a=a
+this.b=b
+this.c=c},
 a01:function a01(){},
 Si(a){var s=new A.aX(new Float64Array(16))
 if(s.dA(a)===0)return null
@@ -53149,15 +53150,16 @@ return new A.qD(B.Bj,"UEFA Tickets",A.a4L(s,A.a6z(B.I,s,s,B.ib),"UEFA",!0),s)}}
 A.qQ.prototype={
 ap(){return new A.Fn()}}
 A.Fn.prototype={
-U(a){var s,r,q=null,p=A.aj5()
-p.geH().i(0,"appId")
-p.geH().i(0,"eventId")
-p.geH().i(0,"cardName")
-p.geH().i(0,"ndefMessage")
-p.geH().i(0,"digitalSignature")
-s=B.d.ES(p.k(0),"https://","tnguefa://")
-r=t.nA
-return new A.rK(A.a6s(new A.xz(B.hn,B.nL,B.nN,B.bj,q,B.tO,q,0,A.b([new A.q8(A.ahP(q,q,new A.oI("assets/images/logo.png",q,q)),q),A.a8V("Open this link on mobile device.",A.ln(q,q,B.i,q,q,q,q,q,q,q,q,48,q,q,q,q,q,!0,q,q,q,q,q,q,q,q)),A.Wv(q,16,q),A.Wv(new A.ym(new A.a02(p,s),q,q,q,q,q,q,!1,q,q,new A.B5(B.hm,B.ci,B.nM,B.bj,q,B.tO,q,0,A.b([A.a8V("OPEN",A.ln(q,q,q,q,q,q,q,q,q,q,q,24,q,q,B.bl,q,q,!0,q,q,q,q,q,q,q,q)),A.Wv(q,q,8),A.ag5(B.xd,q,24)],r),q),q),64,q)],r),q),q,q),B.ib,q)}}
+U(a){var s,r,q,p=null,o=A.aj5()
+o.geH().i(0,"appId")
+o.geH().i(0,"eventId")
+o.geH().i(0,"cardName")
+o.geH().i(0,"ndefMessage")
+o.geH().i(0,"digitalSignature")
+s=o.k(0)
+r=B.d.ES(s,"https://","tnguefa://")
+q=t.nA
+return new A.rK(A.a6s(new A.xz(B.hn,B.nL,B.nN,B.bj,p,B.tO,p,0,A.b([new A.q8(A.ahP(p,p,new A.oI("assets/images/logo.png",p,p)),p),A.a8V("Open this link on mobile device.",A.ln(p,p,B.i,p,p,p,p,p,p,p,p,48,p,p,p,p,p,!0,p,p,p,p,p,p,p,p)),A.Wv(p,16,p),A.Wv(new A.ym(new A.a02(o,r,s),p,p,p,p,p,p,!1,p,p,new A.B5(B.hm,B.ci,B.nM,B.bj,p,B.tO,p,0,A.b([A.a8V("OPEN",A.ln(p,p,p,p,p,p,p,p,p,p,p,24,p,p,B.bl,p,p,!0,p,p,p,p,p,p,p,p)),A.Wv(p,p,8),A.ag5(B.xd,p,24)],q),p),p),64,p)],q),p),p,p),B.ib,p)}}
 A.a02.prototype={
 $0(){var s,r,q,p,o,n="Unknown",m=this.a
 A.fA("Current URL: "+m.k(0))
@@ -53176,9 +53178,8 @@ A.fA("eventId: "+r)
 A.fA("cardName: "+q)
 A.fA("ndefMessage: "+p)
 A.fA("digitalSignature: "+o)
-m=this.b
-A.fA("customSchemeUrl: "+m)
-window.location.href=m
+A.fA("customSchemeUrl: "+this.b)
+window.location.href=this.c
 A.mr(B.es,new A.a01(),t.P)},
 $S:0}
 A.a01.prototype={
